@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lan='en'>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">	
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!-- Add to link to JQuery -->
+  <script lang="javascript"> 
+
+    /* 
+      $(document).ready(); means same as below
+             $().ready(); or below
+       anonymous function --> */
+
+    $().ready( /* Stuff in {} runs once all is loaded  */
+      function() { 
+/*        alert ("The doc is loaded"); Use console.log below instead of an alert */
+          console.log("Message:", "The doc is loaded"); /* Comma sepaated strings; run in browser in f12 mode and look in console for msg */
+/*          $("button").css("color", "red"); */
+          var isPrimary = true;
+          if(isPrimary) {
+            $("button").addClass("btn btn-primary");              
+            $("#thebutton").removeClass("btn btn-primary").addClass("btn-warning"); /* Inside $() is selector */
+          } else {
+            $("button").addClass("btn btn-danger");              
+          }
+      }
+    );
+
+  </script> <!-- Required for JQuery to work - could go anywhere in body -->
+
+</head>
+<body > <!-- Used so JQ waits to run function til html loaded -->
+  ]<button>Click me</button>
+  ]<button>Click me</button>
+  ]<button id="thebutton">Click me</button>
+  ]<button>Click me</button>
+  ]<button>Click me</button>
+
+</body>
+</html>
+
